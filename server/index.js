@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
-
+var cors = require('cors');
 const port = 3000;
+
+
+app.use(cors())
 
 // json file import
 const courses = require("./courses.json");
@@ -23,6 +26,9 @@ app.get("/courses/:id", (req, res) => {
   res.send(single_course)
 })
 
+
+
+// cmd
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
