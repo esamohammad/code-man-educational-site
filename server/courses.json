@@ -1,0 +1,84 @@
+[
+  {
+     "_id": "01",
+     "course_id": "001",
+     "title": "HTML Course",
+     "img": "https://www.ionos.com/digitalguide/fileadmin/DigitalGuide/Teaser/html-tagst.jpg",
+     "desc": "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document. HTML elements are the building blocks of HTML pages. ",
+     "price": "$150",
+     "ratting": 5
+  },
+  {
+     "_id": "02",
+     "course_id": "002",
+     "title": "Basic CSS",
+     "img": "https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg",
+     "desc": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.",
+     "price": "$150",
+     "ratting": 4
+  },
+  {
+     "_id": "03",
+     "course_id": "003",
+     "title": "Java Script",
+     "img": "https://i0.wp.com/leblogducodeur.fr/wp-content/uploads/2019/05/Cest-quoi-javascript.png?fit=367%2C137&ssl=1",
+     "desc": "JavaScript often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.",
+     "price": "$50",
+     "ratting": 4
+  },
+  {
+     "_id": "04",
+     "course_id": "004",
+     "title": "React Js",
+     "img": "https://www.mobinius.com/wp-content/uploads/2020/02/reactjs-2.png",
+     "desc": "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.",
+     "price": "$110",
+     "ratting": 5
+  },
+  {
+     "_id": "05",
+     "course_id": "005",
+     "title": "Rest Api",
+     "img": "http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/06/What-is-REST-API.jpg",
+     "desc": "A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.",
+     "price": "$150",
+     "ratting": 4
+  },
+  {
+     "_id": "06",
+     "course_id": "006",
+     "title": "Node Js",
+     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDp1LAacv8tkp3CQV6GyNrzCPpF7_bfV-fsIp9ON2ChJNRerR3oREPMFJxahKXleSCx94&usqp=CAU",
+     "desc": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.",
+     "price": "$120",
+     "ratting": 4
+  },
+  {
+     "_id": "07",
+     "course_id": "007",
+     "title": "Express Js",
+     "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--YbV36HLj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/hpg6if7btrwilqkidqbe.png",
+     "desc": "Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js.",
+     "price": "$140",
+     "ratting": 5
+  },
+  {
+     "_id": "08",
+     "course_id": "008",
+     "title": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+     "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+     "desc": "total description",
+     "price": "$150",
+     "ratting": 4
+  },
+  {
+     "_id": "09",
+     "course_id": "009",
+     "title": "Next Js",
+     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVo2dJZQOkK73KPhXyayuwtJFKjHDLM-Vi_3JEQB_f1mQKW04JvyR9KzLuY9p7u-ZC-4&usqp=CAU",
+     "desc": "Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites.",
+     "price": "$120",
+     "ratting": 4
+  }
+ 
+]
