@@ -46,7 +46,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <Link to ='./'className="normal-case text-base sm:ms-8 xl:text-2xl ">
+        <Link to ='./'className="normal-case text-lg font-black ms-0  sm:text-2xl sm:ms-4 ">
           CodeMan
         </Link>
       </div>

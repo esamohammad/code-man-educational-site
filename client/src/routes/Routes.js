@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
       {
         path: "/courses",
         element: <Courses></Courses>,
-        loader: () => fetch("https://learning-bee-server.vercel.app/courses"),
+        loader: () => fetch("http://localhost:5000/courses"),
       },
 
       {

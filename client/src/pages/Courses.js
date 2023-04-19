@@ -1,9 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Courses = () => {
+    const courses = useLoaderData();
     return (
         <div>
-            Courses
+            <h1 className='text-center'>Data: {courses.length}</h1>
         </div>
     );
 };
