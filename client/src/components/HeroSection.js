@@ -7,9 +7,9 @@ const HeroSection = () => {
     <div className="hero-overlay bg-opacity-80"></div>
     <div className="hero-content text-center text-neutral-content">
       <div className="max-w-md">
-        <h1 className="mb-5 text-3xl  font-bold lg:text-5xl">Best Online Courses </h1>
-        <p className="mb-5 sm:text-base ">Do you want to Learn  Coding Language??</p>
-        <p className="mb-5 sm:text-lg
+        <h1 style={{ fontFamily: "'Courgette', cursive" }} className="mb-5 text-3xl  font-bold lg:text-5xl lg:text-yellow-500 ">Best Online Courses </h1>
+        <p className="mb-5 text-base lg:text-2xl">Do you want to Learn  Coding Language??</p>
+        <p className="mb-5 text-lg lg:text-xl
         ">We are here for you...</p>
         <button className="btn btn-primary">Get Started</button>
       </div>

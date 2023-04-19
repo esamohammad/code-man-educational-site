@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+// import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Main from "../layouts/Main";
 import Courses from "../pages/Courses";
@@ -8,7 +8,11 @@ import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import Register from "../pages/Register";
 
-export const routes = createBrowserRouter([
+const { createBrowserRouter } = require("react-router-dom");
+
+
+
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
@@ -20,6 +24,7 @@ export const routes = createBrowserRouter([
       {
         path: "/courses",
         element: <Courses></Courses>,
+        loader: () => fetch("https://learning-bee-server.vercel.app/courses"),
       },
 
       {
@@ -49,3 +54,6 @@ export const routes = createBrowserRouter([
     ],
   },
 ]);
+
+
+export default router;

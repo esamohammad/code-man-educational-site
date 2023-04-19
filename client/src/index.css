@@ -1,3 +1,8 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Oswald&display=swap');
+
+
+
 /* taiwind */
 @tailwind base;
 @tailwind components;
