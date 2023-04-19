@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-yarning-100">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,46 +27,49 @@ const Navbar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+            <Link to='/'>Home</Link>
             </li>
             <li tabIndex={0}>
-              <a className="justify-between">Courses</a>
+              <Link to ='/courses'>Courses</Link>
             </li>
             <li>
-              <a>Faq</a>
+            <Link to='/faq'>FAQ</Link>
             </li>
             <li>
-              <a>Blog</a>
+            <Link to='/blog'>Blog</Link>
             </li>
             <li>
-              <a>Login</a>
+            <Link to='/login' className="btn mb-2 text-white">Login</Link>
             </li>
             <li>
-              <a>Register</a>
+            <Link to='/register' className="btn  text-white">Register</Link>
             </li>
           </ul>
         </div>
-        <a className="normal-case text-base sm:ms-8 xl:text-2xl ">
+        <Link to ='./'className="normal-case text-base sm:ms-8 xl:text-2xl ">
           CodeMan
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+          <Link to='/'>Home</Link>
           </li>
           <li tabIndex={0}>
-            <a>Courses</a>
+          <Link to='/courses'>Courses</Link>
           </li>
           <li>
-            <a>FAQ</a>
+            <Link to='/faq'>FAQ</Link>
+          </li>
+          <li>
+            <Link to='/blog'>Blog</Link>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end">
-        <a className="btn me-4">Login</a>
-        <a className="btn">Register</a>
+        <Link to='/login' className="btn me-4">Login</Link>
+        <Link to='/register' className="btn">Register</Link>
       </div>
     </div>
   );

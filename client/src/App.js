@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-      <div className='max-w-[1366px] mx-auto'>
+      <div className='max-w-full mx-auto'>
         <RouterProvider router={router}></RouterProvider>
       </div>
   );
