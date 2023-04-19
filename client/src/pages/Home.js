@@ -8,7 +8,7 @@ import Sidebar from "../components/Sidebar";
 const Home = () => {
   return <div>
    <HeroSection></HeroSection>
-   <Sidebar></Sidebar>
+   {/* <Sidebar></Sidebar> */}
   </div>;
 };
 

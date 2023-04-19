@@ -1,5 +1,6 @@
 import React from "react";
 import bg1 from '../assets/images/carosel/bg1.jpg'
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,7 @@ const HeroSection = () => {
         <p className="mb-5 text-base lg:text-2xl">Do you want to Learn  Coding Language??</p>
         <p className="mb-5 text-lg lg:text-xl
         ">We are here for you...</p>
-        <button className="btn btn-primary">Get Started</button>
+       <Link to='/courses'> <button className="btn btn-primary">Get Started</button></Link>
       </div>
     </div>
   </div>
