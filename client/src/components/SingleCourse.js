@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 const SingleCourse = ({course}) => {
-    const { _id, title, img, desc, Price, rating } = course;
+    const { _id, title, img, desc, price, ratting } = course;
 
     return (
        <Link
@@ -30,10 +30,10 @@ const SingleCourse = ({course}) => {
         <h1 style={{ fontFamily: "'Oswald', sans-serif" }} className="text-2xl">
           {title}
         </h1>
-        <p>{desc.slice(0, 80)}...</p>
+        <p>{desc?.slice(0, 80)}...</p>
         <p className="flex font-bold mt-6 text-yellow-300">
-          <small>Price : {Price}</small>
-          <small className="ml-6">Rating : {rating}</small>
+          <small className='text-xl'>Price : {price}</small>
+          <small className="ml-6 text-xl">Rating : {ratting}</small>
         </p>
       </div>
     </Link>
