@@ -21,8 +21,8 @@
      "_id": "03",
      "course_id": "003",
      "title": "Java Script",
-     "img": "https://i0.wp.com/leblogducodeur.fr/wp-content/uploads/2019/05/Cest-quoi-javascript.png?fit=367%2C137&ssl=1",
-     "desc": "JavaScript often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.",
+     "desc": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, ",
+     "img": "https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-logo.png",
      "price": "$50",
      "ratting": 4
   },
@@ -30,7 +30,7 @@
      "_id": "04",
      "course_id": "004",
      "title": "React Js",
-     "img": "https://www.mobinius.com/wp-content/uploads/2020/02/reactjs-2.png",
+     "img": "https://kobaltsolutions.com/wp-content/uploads/2021/04/Screen-Shot-2021-04-08-at-4.06.03-PM.png",
      "desc": "React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.",
      "price": "$110",
      "ratting": 5
@@ -48,7 +48,7 @@
      "_id": "06",
      "course_id": "006",
      "title": "Node Js",
-     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDp1LAacv8tkp3CQV6GyNrzCPpF7_bfV-fsIp9ON2ChJNRerR3oREPMFJxahKXleSCx94&usqp=CAU",
+     "img": "https://www.loginradius.com/blog/static/6ee159acf6c294342ec04f86aede5d14/701ee/coverImage.jpg",
      "desc": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.",
      "price": "$120",
      "ratting": 4
@@ -57,7 +57,7 @@
      "_id": "07",
      "course_id": "007",
      "title": "Express Js",
-     "img": "https://res.cloudinary.com/practicaldev/image/fetch/s--YbV36HLj--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/hpg6if7btrwilqkidqbe.png",
+     "img": "https://i.ytimg.com/vi/SZHsipbkkJM/maxresdefault.jpg",
      "desc": "Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js.",
      "price": "$140",
      "ratting": 5
@@ -66,7 +66,7 @@
      "_id": "08",
      "course_id": "008",
      "title": "MongoDB",
-     "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+     "img": "https://miro.medium.com/v2/resize:fit:1400/1*QQuXPfuK1lFzNDQkuo7rfQ.png",
      "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
      "price": "$150",
      "ratting": 4
@@ -75,7 +75,7 @@
      "_id": "09",
      "course_id": "009",
      "title": "Next Js",
-     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVo2dJZQOkK73KPhXyayuwtJFKjHDLM-Vi_3JEQB_f1mQKW04JvyR9KzLuY9p7u-ZC-4&usqp=CAU",
+     "img": "https://blog.logrocket.com/wp-content/uploads/2022/03/best-styling-next-js.png",
      "desc": "Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites.",
      "price": "$120",
      "ratting": 4
@@ -83,7 +83,7 @@
    "_id": "10",
    "course_id": "008",
    "title": "MongoDB",
-   "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+   "img": "https://www.turing.com/blog/wp-content/uploads/2022/02/MongoDB-e1644593678800.jpg",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
    "ratting": 4
