@@ -30,7 +30,7 @@ const SingleCourse = ({course}) => {
         <h1 style={{ fontFamily: "'Oswald', sans-serif" }} className="text-2xl">
           {title}
         </h1>
-        <p>{desc?.slice(0, 80)}...</p>
+        <p>{desc?.slice(0, 60)}...</p>
         <p className="flex font-bold mt-6 text-yellow-300">
           <small className='text-xl'>Price : {price}</small>
           <small className="ml-6 text-xl">Rating : {ratting}</small>

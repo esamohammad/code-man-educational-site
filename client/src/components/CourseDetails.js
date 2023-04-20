@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from "react-router-dom";
+import Ratings from "../components/Ratings";
+
 
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
@@ -21,7 +23,7 @@ const CourseDetails = () => {
           <h1 className="text-5xl font-bold">{title}</h1>
           <p className="py-6">{desc}</p>
           <div className="flex mb-10 ">
-            {/* <Ratings rating={ratting}></Ratings> */}
+            <Ratings ratting={ratting}></Ratings>
             <p className="font-bold ml-20">Price : {price}</p>
           </div>
           <div className="md:flex items-center block text-center">
