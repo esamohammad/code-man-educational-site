@@ -2,7 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import SingleCourse from "../components/SingleCourse";
-import "./../style/sidebar.css";
+
 
 const Courses = () => {
   const courses = useLoaderData();
