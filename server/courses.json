@@ -156,7 +156,7 @@
    "_id": "19",
    "course_id": "008",
    "title": "Bootstrap",
-   "img": "",
+   "img": "https://obscureproblemsandgotchas.com/wp-content/uploads/2018/06/bootstrap-stack-e1530246058846.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
    "ratting": 4

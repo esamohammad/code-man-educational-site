@@ -2,7 +2,7 @@ import React from "react";
 
 const Faq = () => {
   return (
-    <div className="w-2/3 mx-auto">
+    <div className=" w-100% lg:w-2/3 mx-auto">
       {/* 1 */}
       <div>
         <div
@@ -249,7 +249,6 @@ const Faq = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
