@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({course}) => {
+  const { _id, title } = course;
   return (
-    <div className=" bg-lime-400 h-32 mx-auto">
-      <p> Sidebar </p>
-    </div>
+    <div className="text-xl font-bold tracking-wide static">
+    <Link to={`/courses/${_id}`} className="hover:text-white">
+      {title}
+    </Link>
+  </div>
   );
 };
 
