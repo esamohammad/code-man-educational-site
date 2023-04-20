@@ -82,7 +82,7 @@
   }, {
    "_id": "10",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "Type Script",
    "img": "https://www.turing.com/blog/wp-content/uploads/2022/02/MongoDB-e1644593678800.jpg",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -90,7 +90,7 @@
 }, {
    "_id": "11",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "Redux",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -98,7 +98,7 @@
 }, {
    "_id": "12",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "Graph QL",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -106,7 +106,7 @@
 }, {
    "_id": "13",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "SQL",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -114,7 +114,7 @@
 }, {
    "_id": "14",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "AWS",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -122,7 +122,7 @@
 }, {
    "_id": "15",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "Docar",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -130,7 +130,7 @@
 }, {
    "_id": "16",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "SWE",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -138,7 +138,7 @@
 }, {
    "_id": "17",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "React Native",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
@@ -146,8 +146,45 @@
 }, {
    "_id": "18",
    "course_id": "008",
-   "title": "MongoDB",
+   "title": "Tail Wind",
    "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+   "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+   "price": "$150",
+   "ratting": 4
+},
+{
+   "_id": "19",
+   "course_id": "008",
+   "title": "Bootstrap",
+   "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+   "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+   "price": "$150",
+   "ratting": 4
+},
+
+{
+   "_id": "20",
+   "course_id": "008",
+   "title": "Chrome Devtool",
+   "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+   "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+   "price": "$150",
+   "ratting": 4
+},
+{
+   "_id": "21",
+   "course_id": "008",
+   "title": "Angular Js",
+   "img": "https://webimages.mongodb.com/_com_assets/cms/kuzt9r42or1fxvlq2-Meta_Generic.png",
+   "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
+   "price": "$150",
+   "ratting": 4
+},
+{
+   "_id": "22",
+   "course_id": "008",
+   "title": "Vue Js",
+   "img": "https://blog.logrocket.com/wp-content/uploads/2021/09/ultimate-guide-SVGs-vue-js.png",
    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
    "price": "$150",
    "ratting": 4
