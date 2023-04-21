@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
   return (
-    <div className="navbar  md:bg-yellow-300 mb-">
+    <div className="mb-  navbar md:bg-yellow-300">
       <div className="navbar-start ">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+          <label tabIndex={0} className="btn-ghost btn lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -24,52 +26,63 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
           >
             <li>
-            <Link to='/'>Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li tabIndex={0}>
-              <Link to ='/courses'>Courses</Link>
+              <Link to="/courses">Courses</Link>
             </li>
             <li>
-            <Link to='/faq'>FAQ</Link>
+              <Link to="/faq">FAQ</Link>
             </li>
             <li>
-            <Link to='/blog'>Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-            <Link to='/login' className="btn mb-2 text-white">Login</Link>
+              <Link to="/login" className="btn mb-2 text-white">
+                Login
+              </Link>
             </li>
             <li>
-            <Link to='/register' className="btn  text-white">Register</Link>
+              <Link to="/register" className="btn  text-white">
+                Register
+              </Link>
             </li>
           </ul>
         </div>
-        <Link to ='./'className="normal-case text-lg font-black ms-0  sm:text-2xl sm:ms-4 ">
+        <Link
+          to="./"
+          className="ms-0 text-lg font-black normal-case  sm:ms-4 sm:text-2xl "
+        >
           CodeMan
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1">
           <li className="font-bold md:text-xl ">
-          <Link to='/'>Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className="font-bold md:text-xl ">
-          <Link to='/courses'>Courses</Link>
+            <Link to="/courses">Courses</Link>
           </li>
           <li className="font-bold md:text-xl ">
-            <Link to='/faq'>FAQ</Link>
+            <Link to="/faq">FAQ</Link>
           </li>
           <li className="font-bold md:text-xl ">
-            <Link to='/blog'>Blog</Link>
+            <Link to="/blog">Blog</Link>
           </li>
         </ul>
       </div>
 
       <div className="navbar-end">
-        <Link to='/login' className="btn me-2 md:mr-15">Login</Link>
-        <Link to='/register' className="btn me-2  md:mr-10">Register</Link>
+        <Link to="/login" className="md:mr-15 btn me-2">
+          {user?.displayName}
+        </Link>
+        <Link to="/register" className="btn me-2  md:mr-10">
+          Register
+        </Link>
       </div>
     </div>
   );
