@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+import { FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
+
   return (
-    <div className="mb-  navbar md:bg-yellow-300">
+    <div className="mb-  navbar">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn-ghost btn lg:hidden">
@@ -77,11 +79,43 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <Link to="/login" className="md:mr-15 btn me-2">
+     
+        <Link to="" className="font-bold md:text-xl md:mr-15 md:me-4 ">
           {user?.displayName}
         </Link>
-        <Link to="/register" className="btn me-2  md:mr-10">
-          Register
+
+        <Link to="" className="md:mr-15 md:me-2">
+      {user?.photoURL ?
+//avatar
+
+
+//  <img src={user.photoURL} style={{ height: '50px'}}  alt="pic" /> 
+
+<div className="avatar online mt-2">
+  <div className="w-8 lg:w-12 rounded-full ring ring-white ring-offset-yellow-500 ring-offset-4">
+    <img src={user.photoURL} alt=""/>
+  </div>
+</div>
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ : <FaUser></FaUser>
+ }
+        </Link>
+
+
+
+
+        <Link to="/login" className="btn me-2  md:mr-10">
+         Login
         </Link>
       </div>
     </div>

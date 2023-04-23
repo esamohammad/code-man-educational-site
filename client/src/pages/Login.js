@@ -1,8 +1,24 @@
 
 import { Link } from 'react-router-dom';
 import { BsGoogle, BsGithub } from "react-icons/bs";
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+
+  const {providerLogin} =useContext(AuthContext);
+
+  const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
  
   return (
     <form onSubmit="" className="card-body lg:w-1/3 mx-auto px-30 bg-base-300 shadow-layer rounded mt-20">
@@ -31,7 +47,7 @@ const Login = () => {
           <button className="btn btn-warning">Login</button>
         </div>
         <div className="flex text-3xl justify-center mt-5">
-          <button onClick="">
+          <button onClick={handleGoogleSignIn}>
             <BsGoogle />
           </button>
           <button onClick="">
