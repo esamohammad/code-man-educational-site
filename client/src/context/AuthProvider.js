@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { getAuth, signInWithPopup, onAuthStateChanged, signOut } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
 import app from '../firbase/firebase.config';
 
 
@@ -14,6 +14,22 @@ const AuthProvider = ({ children }) => {
   const providerLogin = (provider) => {
     return signInWithPopup(auth, provider);
   }
+  // ! create user by registration
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password)
+  }
+
+
+
+
+
+  // ! login user by registration and (ema)
+  const signIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  }
+
+
+
 
 
   //! logout authentication
@@ -21,7 +37,9 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   }
 
-  //observer set for manage user state
+
+
+  //!observer set for manage user state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log('inside auth state change', currentUser);
@@ -37,7 +55,9 @@ const AuthProvider = ({ children }) => {
   const authInfo = {
     user,
     providerLogin,
-    logOut
+    logOut,
+    createUser,
+    signIn
   };
 
   return (

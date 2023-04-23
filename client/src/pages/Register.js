@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { Link } from 'react-router-dom';
-
+import { AuthContext } from '../context/AuthProvider';
 
 const Register = () => {
+
+  // ! authcontext theke createuser niye aste hobe
+  const { createUser } = useContext(AuthContext);
+
+
+  //! from data showed in console , event = e , use it..
+  const handleSubmit = event => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const photoURL = form.photoURL.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, photoURL, email, password);
+
+
+
+    // !create user
+    createUser(email, password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+      })
+      .catch(e => console.error(e));
+  }
+
+
   return (
-    <div className='rounded-lg border-2 bg-gray-300'> 
+    <div className='rounded-lg border-2 bg-gray-300'>
       <form
-        onSubmit=''
+        onSubmit={handleSubmit}
         className="card-body lg:w-1/3 md:mx-auto px-30 bg-base-300 shadow-layer rounded my-20 mx-5"
       >
         <h1
@@ -86,6 +114,7 @@ const Register = () => {
       </form>
     </div>
   );
+
 };
 
 export default Register;
