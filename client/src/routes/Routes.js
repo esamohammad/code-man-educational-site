@@ -11,6 +11,7 @@ import CourseDetails from "../components/CourseDetails";
 import PrivateRoute from "./PrivateRoute";
 
 
+
 const { createBrowserRouter } = require("react-router-dom");
 
 export const router = createBrowserRouter([

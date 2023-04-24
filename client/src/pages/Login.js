@@ -1,6 +1,7 @@
 
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { BsGoogle, BsGithub } from "react-icons/bs";
+import { useLocation, useNavigate } from 'react-router-dom';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
@@ -16,9 +17,10 @@ const Login = () => {
   const navigate = useNavigate();
 
   //! get browser location
+  // ! rederect source 💥💥💥💥💥💥💥💥
   const location = useLocation();
-
-  const from = location.state?.from?.pathname || '/';
+  const from = location.state?.from?.pathname || "/";
+  // !rederect source end 💥💥💥💥💥💥💥💥
 
   //! login submit handler
   const handleSubmit = event => {
@@ -34,7 +36,8 @@ const Login = () => {
         console.log(user);
         form.reset();
         setError(''); //!error clear when all is ok
-        navigate('/'); // ! redirect
+        navigate(from, { replace: true });
+        //! rederect💥💥
       })
       .catch(error => {
         console.error(error)
