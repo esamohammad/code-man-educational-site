@@ -9,7 +9,7 @@ const Register = () => {
   const [error, setError] = useState('');
 
   // ! authcontext theke createuser niye aste hobe
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
 
 
   //! from data showed in console , event = e , use it..
@@ -20,7 +20,7 @@ const Register = () => {
     const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, photoURL, email, password);
+    // !console.log(name, photoURL, email, password);
 
 
 
@@ -31,12 +31,29 @@ const Register = () => {
         console.log(user);
         setError('');
         form.reset();
+        handleUpdateUserProfile(name, photoURL); //🌟🌟
       })
       .catch(e => {
         console.error(e)
         setError(e.message);
       });
   }
+
+
+
+
+  //!register ar user name and photo store-manage user🌟🌟
+  const handleUpdateUserProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL
+    }
+
+    updateUserProfile(profile)
+      .then(() => { })
+      .catch(error => console.error(error));
+  }
+  //! manage user🌟🌟
 
 
   return (
