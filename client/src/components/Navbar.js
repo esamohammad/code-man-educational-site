@@ -106,7 +106,7 @@ const Navbar = () => {
                     {
                         user?.uid ?
                             <>
-                                <span className="lg:me-2">{user?.displayName}</span>
+                                <span className="lg:me-2 hidden lg:inline-block">{user?.displayName}</span>
                                 <button className="btn " onClick={handleLogOut}>Log out</button>
                             </>
                             :

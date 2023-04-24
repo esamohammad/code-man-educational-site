@@ -15,8 +15,8 @@ const Register = () => {
 
 
   // ! authcontext theke createuser niye aste hobe
-  const { createUser, updateUserProfile, verifyEmail } = useContext(AuthContext);
-  //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦verifyEmail
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+
 
 
 
@@ -41,8 +41,7 @@ const Register = () => {
         setError('');
         form.reset();
         handleUpdateUserProfile(name, photoURL); //🌟🌟
-        handleEmailVerification(); //👨‍👨‍👧‍👦👨‍👨‍👧‍👦
-        toast.success('Please verify your email address.')
+        toast.success('Successfully Registered , Go to Login.')
       })
       .catch(e => {
         console.error(e)
@@ -72,13 +71,7 @@ const Register = () => {
 
 
 
-  //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦verifyEmail 🌟🌟
-  const handleEmailVerification = () => {
-    verifyEmail()
-      .then(() => { })
-      .catch(error => console.error(error));
-  }
-  //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦verifyEmail 🌟🌟
+
 
 
 
@@ -161,9 +154,9 @@ const Register = () => {
           <button onClick="">
             <BsGoogle />
           </button>
-          <button onClick="">
+          {/* <button onClick="">
             <BsGithub className="ml-5" />
-          </button>
+          </button> */}
         </div>
       </form>
     </div>

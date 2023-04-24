@@ -101,9 +101,9 @@ const Login = () => {
         <button onClick={handleGoogleSignIn}>
           <BsGoogle />
         </button>
-        <button onClick="">
+        {/* <button onClick="">
           <BsGithub className="ml-5" />
-        </button>
+        </button> */}
       </div>
     </form>
   );

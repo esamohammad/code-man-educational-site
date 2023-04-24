@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, sendEmailVerification } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from '../firbase/firebase.config';
 
 
@@ -45,10 +45,7 @@ const AuthProvider = ({ children }) => {
 
 
 
-  //! send verification mail-👨‍👨‍👧‍👦👨‍👨‍👧‍👦
-  const verifyEmail = () => {
-    return sendEmailVerification(auth.currentUser);
-  }
+
 
 
 
@@ -82,8 +79,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     signIn,
     loading,
-    updateUserProfile, //! 🌟🌟
-    verifyEmail //! 👨‍👨‍👧‍👦👨‍👨‍👧‍👦
+    updateUserProfile //! 🌟🌟
+
   };
 
   return (
