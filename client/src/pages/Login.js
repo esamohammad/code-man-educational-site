@@ -1,11 +1,15 @@
 
 import { Link, useNavigate } from 'react-router-dom';
 import { BsGoogle, BsGithub } from "react-icons/bs";
-import { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
+
+  // ! error message states
+  const [error, setError] = useState('');
+
 
   //! login sing in with registration
   const { signIn } = useContext(AuthContext);
@@ -18,14 +22,20 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+
+
     signIn(email, password)
       .then(result => {
         const user = result.user;
         console.log(user);
         form.reset();
+        setError(''); //error clear
         navigate('/')
       })
-      .catch(error => console.error(error))
+      .catch(error => {
+        console.error(error)
+        setError(error.message);
+      })
   }
 
 
@@ -75,7 +85,7 @@ const Login = () => {
         </label>
       </div>
       <div>
-
+        <p className='text-red-500 text-center'>{error}</p>
       </div>
       <div className="form-control mt-6">
         <button className="btn btn-warning">Login</button>
