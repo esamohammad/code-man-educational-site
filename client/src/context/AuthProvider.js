@@ -1,10 +1,12 @@
 import React, { createContext, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, sendEmailVerification } from 'firebase/auth'
 import app from '../firbase/firebase.config';
 
 
+
 export const AuthContext = createContext();
-const auth = getAuth(app);
+const auth = getAuth(app); //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦
+//!jehetu ache tai no parameter👨‍👨‍👧‍👦👨‍👨‍👧‍👦
 
 
 
@@ -34,9 +36,18 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   }
 
-  //!register ar user name and photo store-manage user-🌟🌟
+
+
+  //! register ar user name and photo store-manage user-🌟🌟
   const updateUserProfile = (profile) => {
     return updateProfile(auth.currentUser, profile);
+  }
+
+
+
+  //! send verification mail-👨‍👨‍👧‍👦👨‍👨‍👧‍👦
+  const verifyEmail = () => {
+    return sendEmailVerification(auth.currentUser);
   }
 
 
@@ -50,7 +61,7 @@ const AuthProvider = ({ children }) => {
 
 
 
-  //!observer set for manage user state
+  //! observer set for manage user state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log('inside auth state change', currentUser);
@@ -71,7 +82,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     signIn,
     loading,
-    updateUserProfile, //🌟🌟
+    updateUserProfile, //! 🌟🌟
+    verifyEmail //! 👨‍👨‍👧‍👦👨‍👨‍👧‍👦
   };
 
   return (

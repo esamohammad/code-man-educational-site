@@ -3,6 +3,7 @@ import { RouterProvider } from "react-router-dom";
 import { useEffect, useState } from "react";
 import router from "./routes/Routes";
 import Loader from "./utilities/Loader";
+import { Toaster } from 'react-hot-toast';
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <div>
             <div className="mx-auto max-w-full">
               <RouterProvider router={router}></RouterProvider>
+              <Toaster />
             </div>
           </div>
         )}

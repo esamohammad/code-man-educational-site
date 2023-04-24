@@ -2,14 +2,22 @@ import React, { useContext, useState } from 'react';
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
+import toast from 'react-hot-toast';
+
 
 const Register = () => {
+
+
 
   //! error message handle
   const [error, setError] = useState('');
 
+
+
   // ! authcontext theke createuser niye aste hobe
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, verifyEmail } = useContext(AuthContext);
+  //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦verifyEmail
+
 
 
   //! from data showed in console , event = e , use it..
@@ -24,7 +32,8 @@ const Register = () => {
 
 
 
-    // !create user
+
+    // !create user 🌟🌟🌟🌟🌟🌟
     createUser(email, password)
       .then(result => {
         const user = result.user;
@@ -32,12 +41,15 @@ const Register = () => {
         setError('');
         form.reset();
         handleUpdateUserProfile(name, photoURL); //🌟🌟
+        handleEmailVerification(); //👨‍👨‍👧‍👦👨‍👨‍👧‍👦
+        toast.success('Please verify your email address.')
       })
       .catch(e => {
         console.error(e)
         setError(e.message);
       });
-  }
+  } // !create user 🌟🌟🌟🌟🌟🌟
+
 
 
 
@@ -54,6 +66,21 @@ const Register = () => {
       .catch(error => console.error(error));
   }
   //! manage user🌟🌟
+
+
+
+
+
+
+  //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦verifyEmail 🌟🌟
+  const handleEmailVerification = () => {
+    verifyEmail()
+      .then(() => { })
+      .catch(error => console.error(error));
+  }
+  //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦verifyEmail 🌟🌟
+
+
 
 
   return (
