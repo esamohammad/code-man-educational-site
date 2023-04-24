@@ -1,5 +1,5 @@
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthProvider';
@@ -15,6 +15,10 @@ const Login = () => {
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  //! get browser location
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
 
   //! login submit handler
   const handleSubmit = event => {
@@ -29,8 +33,8 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         form.reset();
-        setError(''); //error clear when all is ok
-        navigate('/')
+        setError(''); //!error clear when all is ok
+        navigate('/'); // ! redirect
       })
       .catch(error => {
         console.error(error)

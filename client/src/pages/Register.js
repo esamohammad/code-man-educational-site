@@ -43,7 +43,7 @@ const Register = () => {
     <div className='rounded-lg border-2 bg-gray-300'>
       <form
         onSubmit={handleSubmit}
-        className="card-body lg:w-1/3 md:mx-auto px-30 bg-base-300 shadow-layer rounded my-20 mx-5"
+        className="card-body lg:w-1/3 md:mx-auto px-30 bg-base-300 shadow-layer rounded my-20 mx-1"
       >
         <h1
           style={{ fontFamily: "'Oswald', sans-serif" }}

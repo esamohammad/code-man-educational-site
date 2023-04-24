@@ -8,6 +8,8 @@ import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import Register from "../pages/Register";
 import CourseDetails from "../components/CourseDetails";
+import PrivateRoute from "./PrivateRoute";
+
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -33,7 +35,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/faq",
-        element: <Faq></Faq>,
+        element: <PrivateRoute><Faq></Faq></PrivateRoute>,
       },
 
       {
