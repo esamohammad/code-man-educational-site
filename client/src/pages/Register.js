@@ -1,9 +1,12 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 
 const Register = () => {
+
+  //! error message handle
+  const [error, setError] = useState('');
 
   // ! authcontext theke createuser niye aste hobe
   const { createUser } = useContext(AuthContext);
@@ -26,9 +29,13 @@ const Register = () => {
       .then(result => {
         const user = result.user;
         console.log(user);
+        setError('');
         form.reset();
       })
-      .catch(e => console.error(e));
+      .catch(e => {
+        console.error(e)
+        setError(e.message);
+      });
   }
 
 
@@ -98,6 +105,9 @@ const Register = () => {
               Already have an account? Login
             </Link>
           </label>
+          <div>
+            <p className='text-red-500 text-center'>{error}</p>
+          </div>
         </div>
 
         <div className="form-control mt-6">
