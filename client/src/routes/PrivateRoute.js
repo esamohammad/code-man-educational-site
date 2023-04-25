@@ -14,7 +14,7 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     if (loading) { //!  rederect source 💥💥💥💥💥💥💥💥
-        return <svg class="animate-bounce w-6 h-6 ...">
+        return <svg className="animate-bounce w-6 h-6 ...">
 
         </svg>
 

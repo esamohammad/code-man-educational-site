@@ -10,7 +10,7 @@ const Loader = () => {
           <Puff
             height="120"
             width="120"
-            color="#FF0000"
+            color="#E4D00A"
             wrapperStyle={{}}
             wrapperClass=""
             visible={true}

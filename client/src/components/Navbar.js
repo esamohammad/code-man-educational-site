@@ -102,7 +102,7 @@ const Navbar = () => {
                 </Link>
 
 
-                <Link to="" className="font-bold md:text-xl md:mr-15 md:me-4 ">
+                <div className="font-bold md:text-xl md:mr-15 md:me-4 ">
                     {
                         user?.uid ?
                             <>
@@ -117,7 +117,7 @@ const Navbar = () => {
 
                             </>
                     }
-                </Link>
+                </div>
 
 
 
