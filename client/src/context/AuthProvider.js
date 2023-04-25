@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from '../firbase/firebase.config';
 import { GithubAuthProvider } from "firebase/auth";
+import { FacebookAuthProvider } from "firebase/auth"; //!fb---1 ✅✅
 
 
 export const AuthContext = createContext();
@@ -22,6 +23,10 @@ const AuthProvider = ({ children }) => {
   //!github provider
   const githubProvider = new GithubAuthProvider();
 
+
+
+  //!Facebook provider
+  const facebookProvider = new FacebookAuthProvider(); //!fb---2 ✅✅
 
 
 
@@ -65,6 +70,15 @@ const AuthProvider = ({ children }) => {
 
 
 
+  //!fb---3 ✅✅
+  //! Facebook  popup🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+  const signInWithFacebook = () => {
+    setLoading(true);
+    return signInWithPopup(auth, facebookProvider);
+  }
+  //!fb---3 ✅✅
+
+
 
   //! logout authentication
   const logOut = () => {
@@ -96,7 +110,8 @@ const AuthProvider = ({ children }) => {
     signIn,
     loading,
     updateUserProfile,
-    signInWithGithub //! 🌟🌟
+    signInWithGithub, //! Github Popup
+    signInWithFacebook //! FB Popup //!fb---4 ✅✅
 
   };
 

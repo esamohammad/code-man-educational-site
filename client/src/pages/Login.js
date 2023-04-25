@@ -1,11 +1,13 @@
 
 import { Link } from 'react-router-dom';
-import { BsGoogle, BsGithub } from "react-icons/bs";
+import { BsGoogle, BsGithub, BsFacebook } from "react-icons/bs";
 import { useLocation, useNavigate } from 'react-router-dom';
 // ! rederect source 💥💥💥💥💥💥💥💥
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { FacebookAuthProvider } from "firebase/auth";
+
 import toast from 'react-hot-toast';
 
 
@@ -16,9 +18,9 @@ const Login = () => {
 
 
   //! login sing in with registration
-  const { signIn, signInWithGithub } = useContext(AuthContext);
+  const { signIn, signInWithGithub, signInWithFacebook } = useContext(AuthContext);
   //!github❤❤❤
-
+  //! facebook❤❤❤ 
 
 
   const navigate = useNavigate();
@@ -76,7 +78,12 @@ const Login = () => {
   }
 
 
+
+
+
   //!github popup ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
+
+
   const handleGithubSignIn = () => {
     signInWithGithub()
       .then(result => {
@@ -92,6 +99,33 @@ const Login = () => {
 
   }
   //!github popup ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
+
+
+
+
+
+
+
+
+  //!Facebook popup ❤❤  user pic ase na so pore try korbo ok
+  const facebookProvider = new FacebookAuthProvider();
+
+  const handleFacebookSignIn = () => {
+    signInWithFacebook(facebookProvider)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Login Done 💥💖💥')
+      })
+      .catch(e => {
+        console.error(e)
+
+      });
+
+  }
+  //!Facebook popup ❤❤
+
 
 
 
@@ -134,6 +168,9 @@ const Login = () => {
         </button>
         <button onClick={handleGithubSignIn}>
           <BsGithub className="ml-5" />
+        </button>
+        <button onClick={handleFacebookSignIn}>
+          <BsFacebook className="ml-5" />
         </button>
       </div>
     </form>
