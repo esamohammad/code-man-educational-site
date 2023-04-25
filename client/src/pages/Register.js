@@ -126,10 +126,10 @@ const Register = () => {
 
 
   return (
-    <div className='rounded-lg border-2 bg-gray-300'>
+    <div className=' '>
       <form
         onSubmit={handleSubmit}
-        className="card-body lg:w-1/3 md:mx-auto px-30 bg-base-300 shadow-layer rounded my-20 mx-1"
+        className="card-body w-max mx-auto lg:w-1/3 px-30 bg-base-300 shadow-layer rounded my-20 mx-1"
       >
         <h1
           style={{ fontFamily: "'Oswald', sans-serif" }}
@@ -187,8 +187,8 @@ const Register = () => {
             <small className="text-red-600"></small>
           </label>
           <label className="label">
-            <Link to="/login" className="label-text-2xl link link-hover">
-              Already have an account? Login
+            <Link to="/login" className="label-text-xl text-red-700 font-semibold link link-hover">
+              Already have an account? Login.
             </Link>
           </label>
           <div>
