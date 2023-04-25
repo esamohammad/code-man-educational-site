@@ -5,6 +5,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../context/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import toast from 'react-hot-toast';
+
 
 const Login = () => {
 
@@ -13,14 +15,21 @@ const Login = () => {
 
 
   //! login sing in with registration
-  const { signIn } = useContext(AuthContext);
-  const navigate = useNavigate();
+  const { signIn, signInWithGithub } = useContext(AuthContext);
+  //!github❤❤❤
 
+
+
+  const navigate = useNavigate();
   //! get browser location
   // ! rederect source 💥💥💥💥💥💥💥💥
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || '/';
   // !rederect source end 💥💥💥💥💥💥💥💥
+
+
+
+
 
   //! login submit handler
   const handleSubmit = event => {
@@ -36,8 +45,8 @@ const Login = () => {
         console.log(user);
         form.reset();
         setError(''); //!error clear when all is ok
-        navigate(from, { replace: true });
-        //! rederect💥💥
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Login Done 💥💖💥')
       })
       .catch(error => {
         console.error(error)
@@ -59,9 +68,30 @@ const Login = () => {
       .then(result => {
         const user = result.user;
         console.log(user);
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Login Done 💥💖💥')
       })
       .catch(error => console.error(error))
   }
+
+
+  //!github popup ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Login Done 💥💖💥')
+      })
+      .catch(e => {
+        console.error(e)
+
+      });
+
+  }
+  //!github popup ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
+
 
 
 
@@ -101,9 +131,9 @@ const Login = () => {
         <button onClick={handleGoogleSignIn}>
           <BsGoogle />
         </button>
-        {/* <button onClick="">
+        <button onClick={handleGithubSignIn}>
           <BsGithub className="ml-5" />
-        </button> */}
+        </button>
       </div>
     </form>
   );

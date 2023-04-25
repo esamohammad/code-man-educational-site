@@ -3,7 +3,8 @@ import { BsGoogle, BsGithub } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 import toast from 'react-hot-toast';
-
+import { GoogleAuthProvider } from 'firebase/auth'
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
@@ -15,7 +16,19 @@ const Register = () => {
 
 
   // ! authcontext theke createuser niye aste hobe
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateUserProfile, signInWithGithub } = useContext(AuthContext);
+
+  //!github❤❤❤
+
+
+
+  const navigate = useNavigate();
+  //! get browser location
+  // ! rederect source 💥💥💥💥💥💥💥💥
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+  // !rederect source end 💥💥💥💥💥💥💥💥
+
 
 
 
@@ -41,7 +54,8 @@ const Register = () => {
         setError('');
         form.reset();
         handleUpdateUserProfile(name, photoURL); //🌟🌟
-        toast.success('Successfully Registered , Go to Login.')
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Registered, Please Reload Page .')
       })
       .catch(e => {
         console.error(e)
@@ -69,6 +83,41 @@ const Register = () => {
 
 
 
+  // ! Google singin pop up
+  const { providerLogin } = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider()
+
+  const handleGoogleSignIn = () => {
+    providerLogin(googleProvider)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Login Done 💥💖💥')
+      })
+      .catch(error => console.error(error))
+  }
+
+
+
+
+
+  //!github popup ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });  //! rederect💥💥
+        toast.success('Successfully Login Done 💥💖💥')
+      })
+      .catch(e => {
+        console.error(e)
+
+      });
+
+  }
+  //!github popup ❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤❤
 
 
 
@@ -151,12 +200,12 @@ const Register = () => {
           <button className="btn btn-warning hover:bg-gray-500">Register</button>
         </div>
         <div className="flex text-3xl justify-center mt-5">
-          <button onClick="">
+          <button onClick={handleGoogleSignIn}>
             <BsGoogle />
           </button>
-          {/* <button onClick="">
+          <button onClick={handleGithubSignIn}>
             <BsGithub className="ml-5" />
-          </button> */}
+          </button>
         </div>
       </form>
     </div>

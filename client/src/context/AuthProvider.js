@@ -1,10 +1,11 @@
 import React, { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import app from '../firbase/firebase.config';
-
+import { GithubAuthProvider } from "firebase/auth";
 
 
 export const AuthContext = createContext();
+
 const auth = getAuth(app); //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦
 //!jehetu ache tai no parameter👨‍👨‍👧‍👦👨‍👨‍👧‍👦
 
@@ -15,11 +16,18 @@ const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
 
+  //!github provider
+  const githubProvider = new GithubAuthProvider();
 
+
+  //!google sign in with popup
   const providerLogin = (provider) => {
     setLoading(true);
     return signInWithPopup(auth, provider);
   }
+
+
+
   // ! create user by registration
   const createUser = (email, password) => {
     setLoading(true);
@@ -28,9 +36,7 @@ const AuthProvider = ({ children }) => {
 
 
 
-
-
-  // ! login user by registration and (ema)
+  // ! login user by and (email  and password)
   const signIn = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -45,7 +51,11 @@ const AuthProvider = ({ children }) => {
 
 
 
-
+  //! github🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+  const signInWithGithub = () => {
+    return signInWithPopup(auth, githubProvider);
+  }
+  //! github🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
 
 
 
@@ -58,7 +68,7 @@ const AuthProvider = ({ children }) => {
 
 
 
-  //! observer set for manage user state
+  //! observer set for manage user state change
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log('inside auth state change', currentUser);
@@ -79,7 +89,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     signIn,
     loading,
-    updateUserProfile //! 🌟🌟
+    updateUserProfile,
+    signInWithGithub //! 🌟🌟
 
   };
 
