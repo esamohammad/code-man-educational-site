@@ -13,11 +13,16 @@ const auth = getAuth(app); //!👨‍👨‍👧‍👦👨‍👨‍👧‍👦
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); //!redirect issue
+  // ! rederect source 💥💥💥💥💥💥💥💥
+
+
 
 
   //!github provider
   const githubProvider = new GithubAuthProvider();
+
+
 
 
   //!google sign in with popup
@@ -53,6 +58,7 @@ const AuthProvider = ({ children }) => {
 
   //! github🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
   const signInWithGithub = () => {
+    setLoading(true);
     return signInWithPopup(auth, githubProvider);
   }
   //! github🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
