@@ -39,7 +39,7 @@
     "_id": "05",
     "course_id": "005",
     "title": "Rest Api",
-    "img": "http://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/06/What-is-REST-API.jpg",
+    "img": "https://dz2cdn1.dzone.com/storage/temp/4801566-infographic-3.png",
     "desc": "A REST API (also known as RESTful API) is an application programming interface (API or web API) that conforms to the constraints of REST architectural style and allows for interaction with RESTful web services. REST stands for representational state transfer and was created by computer scientist Roy Fielding.",
     "price": "$150",
     "ratting": 4
@@ -48,7 +48,7 @@
     "_id": "06",
     "course_id": "006",
     "title": "Node Js",
-    "img": "https://www.loginradius.com/blog/static/6ee159acf6c294342ec04f86aede5d14/701ee/coverImage.jpg",
+    "img": "https://www.simplilearn.com/ice9/free_resources_article_thumb/parts_of_nodejs.png",
     "desc": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.",
     "price": "$120",
     "ratting": 4
@@ -135,15 +135,6 @@
     "ratting": 4
   },
 
-  {
-    "_id": "16",
-    "course_id": "008",
-    "title": "SWE",
-    "img": "",
-    "desc": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License which is deemed non-free by several distributions.",
-    "price": "$150",
-    "ratting": 4
-  },
   {
     "_id": "17",
     "course_id": "008",

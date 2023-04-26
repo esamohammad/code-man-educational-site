@@ -14,7 +14,7 @@ const Courses = () => {
         {/* sidebar---2. */}
         <aside className="  relative md:sticky md:top-0 md:h-screen">
           {/* // Fixed Sidebar */}
-          <div className=" mx-4 h-full  rounded-2xl bg-yellow-500  p-4 md:ml-4 ">
+          <div className=" mx-4 h-full  rounded-2xl bg-yellow-500  p-4 md:ml-4 mb-4">
             {courses.map((course) => (
               <Sidebar course={course} key={course._id}></Sidebar>
             ))}
