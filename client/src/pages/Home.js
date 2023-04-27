@@ -1,14 +1,16 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
+import InfoSection from "../components/InfoSection";
 
-import Sidebar from "../components/Sidebar";
-
+import About from "../components/About";
 
 
 const Home = () => {
   return <div>
-   <HeroSection></HeroSection>
-   {/* <Sidebar></Sidebar> */}
+    <HeroSection></HeroSection>
+    {/* <Sidebar></Sidebar> */}
+    <About></About>
+    <InfoSection></InfoSection>
   </div>;
 };
 

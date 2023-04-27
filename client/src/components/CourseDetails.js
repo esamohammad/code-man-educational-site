@@ -10,21 +10,21 @@ const CourseDetails = () => {
 
   return (
     <div id="downloadPage">
-      <div className="hero min-h-screen bg-base-200 pb-20 mb:pb-0 cursor-pointer">
-        <div className="hero-content flex-col lg:flex-row ">
+      <div className="hero min-h-screen bg-blue-200 pb-20 mb:pb-0 ">
+        <div className="hero-content flex-col lg:flex-row cursor-pointer">
           <img
             style={{ width: "520px" }}
             src={img}
-            className="mask mask-pentagon shadow-2xl "
+            className="mask mask-squircle shadow-2xl cursor-pointer "
             alt=""
 
           />
           <div>
             <h1 className="text-5xl font-bold">{title}</h1>
-            <p className="py-6">{desc}</p>
+            <p className="py-6 text-justify">{desc}</p>
             <div className="flex mb-10 ">
               <Ratings ratting={ratting}></Ratings>
-              <p className="font-bold ml-20">Price : {price}</p>
+              <p className="font-bold md:ml-20 ml-4">Price : {price}</p>
             </div>
             <div className="md:flex items-center block text-center">
               <Link to={`/premium/${_id}`}>

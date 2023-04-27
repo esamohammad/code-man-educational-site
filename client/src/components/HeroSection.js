@@ -1,5 +1,5 @@
 import React from "react";
-import bg1 from '../assets/images/carosel/bg1.jpg'
+
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {

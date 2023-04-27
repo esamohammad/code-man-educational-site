@@ -5,16 +5,16 @@ import { Link } from "react-router-dom";
 
 
 
-const SingleCourse = ({course}) => {
-    const { _id, title, img, desc, price, ratting } = course;
+const SingleCourse = ({ course }) => {
+  const { _id, title, img, desc, price, ratting } = course;
 
-    return (
-       <Link
+  return (
+    <Link
       to={`/courses/${_id}`}
       style={{ height: "320px" }}
-      className="rounded-lg shadow-lg shadow-black relative single-course mt-10 md:mt-0 block"
+      className="rounded-lg shadow-lg shadow-black relative single-course mt-10 md:mt-0 block cursor-auto"
     >
-      <div className="overflow-hidden rounded-lg">
+      <div className="overflow-hidden rounded-lg cursor-auto">
         <img
           style={{ height: "320px" }}
           className="rounded-lg"

@@ -131,7 +131,7 @@ const Login = () => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="card-body w-max mx-auto lg:w-1/3 bg-base-300 shadow-layer rounded mt-20">
+    <form onSubmit={handleSubmit} className="card-body max-w-xs mx-auto lg:max-w-md px-30 bg-base-300 shadow-layer rounded my-20 ">
       <h1 style={{ fontFamily: "'Oswald', sans-serif" }} className='text-3xl font-semibold text-center'>Please <span className='text-yellow-500'>Login</span></h1>
       <div className="form-control">
         <label className="label">
@@ -152,7 +152,7 @@ const Login = () => {
 
         <label className="label">
           <Link to="/register" className="label-text-xl link link-hover text-red-700 font-semibold">
-            New to this site ? Create an account.
+            Are you new to this site ? <br />Create an account!
           </Link>
         </label>
       </div>

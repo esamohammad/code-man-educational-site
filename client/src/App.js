@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import { RouterProvider } from "react-router-dom";
 import { useEffect, useState } from "react";
 import router from "./routes/Routes";
@@ -22,7 +22,7 @@ function App() {
           <Loader></Loader>
         ) : (
           <div>
-            <div className="mx-auto max-w-full">
+            <div className="mx-auto  max-w-screen-2xl  ">
               <RouterProvider router={router}></RouterProvider>
               <Toaster />
             </div>
@@ -34,3 +34,7 @@ function App() {
 }
 
 export default App;
+
+//!max-w-screen-2xl ata 1536 px porjonto
+//!max-w-full  ata full w -100%
+//!max-w-screen-xl ata 1280px porjonto

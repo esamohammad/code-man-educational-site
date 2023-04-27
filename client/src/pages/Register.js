@@ -129,7 +129,7 @@ const Register = () => {
     <div className=' '>
       <form
         onSubmit={handleSubmit}
-        className="card-body w-max mx-auto lg:w-1/3 px-30 bg-base-300 shadow-layer rounded my-20 mx-1"
+        className="card-body max-w-xs mx-auto lg:max-w-md px-30 bg-base-300 shadow-layer rounded my-20"
       >
         <h1
           style={{ fontFamily: "'Oswald', sans-serif" }}
