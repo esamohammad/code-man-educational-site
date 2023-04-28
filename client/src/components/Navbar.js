@@ -92,7 +92,7 @@ const Navbar = () => {
 
                         // ! avatar
                         <div className="avatar online mt-2">
-                            <div className="w-8 lg:w-12 rounded-full ring ring-white ring-offset-yellow-500 ring-offset-4">
+                            <div className="w-8 lg:w-12 rounded-full ring ring-white ">
                                 <img src={user?.photoURL} alt="" />
                             </div>
                         </div>
