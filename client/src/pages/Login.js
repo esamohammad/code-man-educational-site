@@ -9,6 +9,10 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { FacebookAuthProvider } from "firebase/auth";
 
 import toast from 'react-hot-toast';
+import { runStarsReset } from "../utilities/Utils.js";
+//!pretier campus
+
+
 
 
 const Login = () => {
@@ -49,6 +53,7 @@ const Login = () => {
         form.reset();
         setError(''); //!error clear when all is ok
         navigate(from, { replace: true });  //! rederect💥💥
+        runStarsReset();
         toast.success('Successfully Login Done 💥💖💥')
       })
       .catch(error => {
@@ -72,6 +77,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         navigate(from, { replace: true });  //! rederect💥💥
+        runStarsReset();
         toast.success('Successfully Login Done 💥💖💥')
       })
       .catch(error => console.error(error))
@@ -90,6 +96,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         navigate(from, { replace: true });  //! rederect💥💥
+        runStarsReset();
         toast.success('Successfully Login Done 💥💖💥')
       })
       .catch(e => {
@@ -116,6 +123,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         navigate(from, { replace: true });  //! rederect💥💥
+        runStarsReset();
         toast.success('Successfully Login Done 💥💖💥')
       })
       .catch(e => {
